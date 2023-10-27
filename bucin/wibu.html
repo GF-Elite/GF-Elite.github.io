@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Random Anime Image Generator</title>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+</head>
+<body>
+	<script>
+		// setup function to create canvas and run only once
+		function setup() {
+			createCanvas(400, 400);
+		}
+
+		// draw function to generate random image on loop
+		function draw() {
+			background(200);
+			// randomize values for color and position
+			let r = random(0, 255);
+			let g = random(0, 255);
+			let b = random(0, 255);
+			let x = random(0, width);
+			let y = random(0, height);
+			let size = random(50, 150);
+			// draw image
+			fill(r, g, b);
+			noStroke();
+			ellipse(x, y, size, size);
+		}
+	</script>
+</body>
+</html>
